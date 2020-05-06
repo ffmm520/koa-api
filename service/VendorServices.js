@@ -17,16 +17,17 @@ async function findVendorById(ctx) {
   ctx.body = result;
 }
 
-// 根据供应商代码添加供应商账户
+// 添加供应商账户
 async function addVendorByCode(ctx) {
   // ？正则判断code是否符合规则
   const { vcode } = ctx.request.body;
+  console.log(vcode);
   // ctx.body = vcode;
   const vendor = await findVendorByCode(vcode);
   ctx.body = vendor;
 }
 
-// 给供应商添加商品
+// 修改供应商账户密码
 async function addGoodsByid(ctx) {
   const { vid, goodid, ownerid } = ctx.request.body;
   console.log(vid, goodid, ownerid);
@@ -47,7 +48,8 @@ async function addGoodsByid(ctx) {
   }
 
   // ctx.body = { "msg": "hello"}
-  ctx.body = boom.badRequest("添加信息重复").output.payload;
+  ctx.body = boom.badRequest("添加商品信息重复").output.payload;
 }
+// 禁用供应商：停用
 
 module.exports = { findVendorById, addVendorByCode, addGoodsByid };

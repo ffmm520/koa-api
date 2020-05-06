@@ -9,11 +9,16 @@
   "author": "baboon",
   "license": "ISC",
   "dependencies": {
+    "@hapi/boom": "^9.1.0",
     "dotenv": "^8.2.0",
     "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
     "koa-router": "^8.0.8",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.7"
+    "oracledb": "^4.2.0",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^5.21.7",
+    "typeorm": "^0.2.24"
   },
   "devDependencies": {
     "prettier": "2.0.5"

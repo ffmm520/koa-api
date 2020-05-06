@@ -1,10 +1,9 @@
-const { Sequelize, DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db.config");
 
 const Vendor = sequelize.define(
   "Vendor",
   {
-    // 在这里定义模型属性
     vid: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -22,16 +21,16 @@ const Vendor = sequelize.define(
       allowNull: false,
     },
     stopflag: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.ENUM("0", "1"),
       allowNull: false,
     },
     startdate: { type: DataTypes.DATE, allowNull: false },
     enddate: { type: DataTypes.DATE, allowNull: false },
   },
   {
-    tableName: 'vendors',
-    timestamps: false
-}
+    tableName: "vendors",
+    timestamps: false,
+  }
 );
 
-module.exports = { Vendor }
+module.exports = { Vendor };

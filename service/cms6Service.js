@@ -1,0 +1,1 @@
+const { vcode } = ctx.params;

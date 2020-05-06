@@ -17,7 +17,6 @@ const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PWD, {
 		idle: 10000
 	}
 });
-// console.log(DB_NAME, DB_USER, DB_PWD, DB_HOST, DB_PORT);
 
 // 测试连接
 async function run() {
